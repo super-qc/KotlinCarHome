@@ -18,6 +18,6 @@ interface CarBrandDao {
 
 
     @Query("SELECT * FROM CarBrandEntity")
-    fun getCarBrand(): PagingSource<Int,CarBrandEntity>
+    fun getCarBrand(): PagingSource<Int, CarBrandEntity>
 
 }

@@ -20,6 +20,7 @@ class CarBrandRepositoryImpl(
     private val mapper2ItemModel: Mapper<CarBrandEntity, CarBrandItemModel>
 
 ) : Repository {
+    @OptIn(ExperimentalPagingApi::class)
     override fun fetchCarBrandList(): Flow<PagingData<CarBrandItemModel>> {
         return Pager(
             config = PagingConfig(
